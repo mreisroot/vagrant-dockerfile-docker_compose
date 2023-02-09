@@ -1,0 +1,16 @@
+version: "3.9"
+
+services:
+  app:
+    container_name: viacep
+    image: viacep
+    build: .
+
+    ports:
+      - "8080:80"
+    networks:
+      - site-network
+
+networks:
+  site-network:
+    driver: bridge
